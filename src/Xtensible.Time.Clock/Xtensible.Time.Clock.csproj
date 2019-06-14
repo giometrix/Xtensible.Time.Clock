@@ -5,6 +5,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Giovanni Galbo</Authors>
     <Company />
+    <PackageTags>mock time clock</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/giometrix/Xtensible.Time.Clock</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/giometrix/Xtensible.Time.Clock</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
