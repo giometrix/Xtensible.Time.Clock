@@ -1,38 +1,35 @@
-﻿using System;
-using System.Diagnostics;
-
-namespace Xtensible.Time.Domain
+﻿namespace Xtensible.Time.Domain
 {
+	using System;
+
 	public class MockClock : IClock
 	{
-		private DateTimeOffset _time;
-		public DateTimeOffset UtcNow => _time.ToUniversalTime();
-		public DateTimeOffset MinValue => DateTimeOffset.MinValue;
-		public DateTimeOffset MaxValue => DateTimeOffset.MaxValue;
-		public DateTimeOffset Now => _time;
+		public DateTimeOffset UtcNow => Now.ToUniversalTime();
 
+		public DateTimeOffset MinValue => DateTimeOffset.MinValue;
+
+		public DateTimeOffset MaxValue => DateTimeOffset.MaxValue;
+
+		public DateTimeOffset Now { get; private set; }
 
 		public void Adjust(TimeSpan timeSpan)
 		{
-
-			_time = _time.Add(timeSpan);
+			Now = Now.Add(timeSpan);
 		}
 
 		public void Adjust(DateTimeOffset time)
 		{
-
-			_time = time;
+			Now = time;
 		}
-
 
 		public MockClock()
 		{
-			_time = DateTimeOffset.UtcNow;
+			Now = DateTimeOffset.UtcNow;
 		}
 
 		public MockClock(DateTimeOffset time)
 		{
-			_time = time;
+			Now = time;
 		}
 	}
 }
