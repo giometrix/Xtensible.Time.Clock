@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Xtensible.Time.Clock
+namespace Xtensible.Time
 {
 	public static class Clock
 	{
