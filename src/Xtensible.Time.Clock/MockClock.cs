@@ -1,7 +1,7 @@
-﻿namespace Xtensible.Time.Domain
-{
-	using System;
+﻿using System;
 
+namespace Xtensible.Time
+{
 	public class MockClock : IClock
 	{
 		public DateTimeOffset UtcNow => Now.ToUniversalTime();

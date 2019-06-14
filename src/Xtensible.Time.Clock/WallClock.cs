@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Xtensible.Time.Domain
+namespace Xtensible.Time
 {
 	public class WallClock : IClock
 	{

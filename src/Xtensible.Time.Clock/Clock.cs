@@ -1,8 +1,7 @@
-﻿namespace Xtensible.Time.Clock
-{
-	using System;
-	using Xtensible.Time.Domain;
+﻿using System;
 
+namespace Xtensible.Time.Clock
+{
 	public static class Clock
 	{
 		/// <summary>

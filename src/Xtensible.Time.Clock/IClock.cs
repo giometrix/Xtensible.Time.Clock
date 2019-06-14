@@ -1,4 +1,4 @@
-﻿namespace Xtensible.Time.Domain
+﻿namespace Xtensible.Time
 {
 	using System;
 
