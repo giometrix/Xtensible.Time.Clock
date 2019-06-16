@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xtensible.Time.Clock", "src\Xtensible.Time.Clock\Xtensible.Time.Clock.csproj", "{43CD67A1-3E60-4B58-8F8C-190EADD7538F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xtensible.Time.Clock", "src\Xtensible.Time.Clock\Xtensible.Time.Clock.csproj", "{43CD67A1-3E60-4B58-8F8C-190EADD7538F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xtensible.Time.Tests", "tests\Xtensible.Time.Tests\Xtensible.Time.Tests.csproj", "{C69963E3-2D5D-432B-BE17-61E366766562}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{43CD67A1-3E60-4B58-8F8C-190EADD7538F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43CD67A1-3E60-4B58-8F8C-190EADD7538F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CD67A1-3E60-4B58-8F8C-190EADD7538F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69963E3-2D5D-432B-BE17-61E366766562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69963E3-2D5D-432B-BE17-61E366766562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69963E3-2D5D-432B-BE17-61E366766562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69963E3-2D5D-432B-BE17-61E366766562}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

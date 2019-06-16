@@ -17,6 +17,11 @@ namespace Xtensible.Time
 			Now = Now.Add(timeSpan);
 		}
 
+		public void Adjust(double timeInMilliseconds)
+		{
+			Adjust(TimeSpan.FromMilliseconds(timeInMilliseconds));
+		}
+
 		public void Adjust(DateTimeOffset time)
 		{
 			Now = time;
