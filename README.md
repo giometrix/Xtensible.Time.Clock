@@ -1,9 +1,12 @@
 ## Xtensible.Time
 [![Nuget](https://img.shields.io/nuget/dt/Xtensible.Time.Clock.svg?logo=Nuget&style=flat-square)](https://www.nuget.org/packages/Xtensible.Time.Clock)
 ### TL;DR
-An easy to use mockable clock. Pass `WallClock` to your services in production/dev code and use MockClock in unit tests; or, if you don't want to pass around a clock, do `Clock.Default = new MockClock();` in your unit tests.
+An easy to use mockable clock. Pass `WallClock` to your services in production/dev code and use `MockClock` in unit tests; or, if you don't want to pass around a clock, do `Clock.Default = new MockClock();` in your unit tests.
+
+Also includes useful rounding extension (`RoundUp`, `RoundDown`, and `RoundNearest`) that can be used on any `DateTime` or `DateTimeOffset`, including the time that comes from `Clock`.
 
 ### Usage
+#### `MockClock` and `WallClock`
 Xtensible.Time supports two styles.  You can write services that take in a clock object like so:
 ```csharp
 public class MyService()
@@ -47,4 +50,21 @@ For your convenience, `Clock` has an `AsMockClock()` method so that you can do t
 ```csharp
   // new time will be Jul 1, 2019 14:01:00
   Clock.AsMockClock().Adjust(60000);
+```
+
+#### Rounding
+New with 1.1, rounding extension methods have been included (`RoundUp()`, `RoundDown()`, `RoundNearest()`).  These can be used on any `DateTime` or `DateTimeOffset`.
+
+Examples:
+```csharp
+var t = DateTimeOffset.Parse("2019-07-01T07:22:16.3000000Z");
+// expected: Jul 1 7:22:16
+var roundedDownTime = t.RoundDown(TimeSpan.FromSeconds(1));
+```
+
+Since the extension methods work with any `DateTime` or `DateTimeOffset`, they of course will work with `Clock`:
+```csharp
+  Clock.Default = new MockClock(new DateTimeOffset(2019, 7, 1, 14, 0, 0, TimeSpan.Zero));
+  // expected: Jul 1 7:22:16
+  var roundedDownTime = Clock.Default.RoundDown(TimeSpan.FromSeconds(1));
 ```
