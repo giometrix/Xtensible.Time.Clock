@@ -66,5 +66,5 @@ Since the extension methods work with any `DateTime` or `DateTimeOffset`, they o
 ```csharp
   Clock.Default = new MockClock(new DateTimeOffset(2019, 7, 1, 14, 0, 0, TimeSpan.Zero));
   // expected: Jul 1 7:22:16
-  var roundedDownTime = Clock.Default.RoundDown(TimeSpan.FromSeconds(1));
+  var roundedDownTime = Clock.Default.UtcNow.RoundDown(TimeSpan.FromSeconds(1));
 ```
