@@ -24,11 +24,11 @@ public class MyService()
 }
 ```
 
-In your app (desktop, asp.net, xamarin, etc, you'd inject a `WallClock` like so:
+In your app (desktop, asp.net, xamarin, etc), you'd inject a `WallClock` like so:
 ```csharp
 var service = new MyService(new WallClock());
 ```
-and in your unit trsts, you'd inject a `MockClock` like so:
+and in your unit tests, you'd inject a `MockClock` like so:
 ```csharp
 var service = new MyService(new MockClock(new DateTimeOffset(2019, 7, 1, 14, 0, 0, TimeSpan.Zero)));
 ```
