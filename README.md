@@ -1,5 +1,6 @@
 ## Xtensible.Time
 [![Nuget](https://img.shields.io/nuget/dt/Xtensible.Time.Clock.svg?logo=Nuget&style=flat-square)](https://www.nuget.org/packages/Xtensible.Time.Clock)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/aba95264062f4ab98724a5cf4daedff0)](https://www.codacy.com/manual/giometrix/Xtensible.Time.Clock?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=giometrix/Xtensible.Time.Clock&amp;utm_campaign=Badge_Grade)
 ### TL;DR
 An easy to use mockable clock. Pass `WallClock` to your services in production/dev code and use `MockClock` in unit tests; or, if you don't want to pass around a clock, do `Clock.Default = new MockClock();` in your unit tests.
 
